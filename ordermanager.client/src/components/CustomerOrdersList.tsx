@@ -9,7 +9,7 @@ const CustomerOrdersList = () => {
   const { id } = useParams();
   const [displayOrderForm, setDisplayOrderForm] = useState(false);
 
-  const {customerId, selectedCustomer,orders,loading,customerDeleted,error, fetchOrders} = useOrders(parseInt(id ?? "")); // Custom hook to fetch orders
+  const {customerId, selectedCustomer,orders,loading,customerDeleted,error, fetchOrders} =  useOrders(Number(id)); //   useOrders(parseInt(id ?? "")); // Custom hook to fetch orders
   const appState = useAppStore();
 
   const navigate = useNavigate();
@@ -56,7 +56,10 @@ const CustomerOrdersList = () => {
       <div className="mb-3">
         <h1>Orders for Customer #{customerId}</h1>
       </div>
-      <ErrorAlert errorMsg={error?.message || ""} onRetry={handleFetchOrders}  />
+
+      {error && (
+        <ErrorAlert errorMsg={error.message} onRetry={handleFetchOrders} />
+      )}
 
       <div className="mb-3">
         <table className="table w-50 table-striped table-bordered table-sm ">
