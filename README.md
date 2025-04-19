@@ -74,5 +74,41 @@ This script builds the backend Docker image and starts the containers via `docke
 - **SQL Server**: localhost:1433
 
 ---
+## 📸 Screenshots
+
+### 🏠 Home Page  
+Displays a list of customers.
+
+<img src="https://github.com/user-attachments/assets/ddabf0a9-2dac-45d9-bb5e-f0e31f8bdd18" alt="HomePage" width="600"/>
+
+---
+
+### ➕ Create Customer  
+Press the **Create Customer** button to add new customers.
+
+<img src="https://github.com/user-attachments/assets/853a1f69-d7f8-49ed-9933-cce24b2b5b44" alt="AddCustomer" width="600"/>
+
+---
+
+### 📋 View Orders  
+Click the customer row or press **View Orders** to see their orders.
+
+<img src="https://github.com/user-attachments/assets/ec571b1b-35f3-4314-b67a-a7b08c2822bb" alt="CustomerOrders" width="600"/>
+
+---
+
+### 🛒 Add Order  
+Press **Add Order** to create a new order.
+
+<img src="https://github.com/user-attachments/assets/3a3921ee-7b3c-4266-8cb2-eff9575b73ef" alt="AddOrder" width="600"/>
+
+---
+
+### ✏️ Edit or Delete Customer  
+Press **Edit Customer** to update or remove a customer.
+
+<img src="https://github.com/user-attachments/assets/3f3dd2b1-cae2-4158-9c40-94d50a70f1ec" alt="EditCustomer" width="600"/>
+
+
 
 
