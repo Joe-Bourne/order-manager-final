@@ -32,4 +32,4 @@ jobs:
           context: .
           file: ./dockerfile
           push: true
-          tags: ghcr.io/joe-bourne/order-manager:latest
+          tags: ghcr.io/joe-bourne/order-manager-final:latest
