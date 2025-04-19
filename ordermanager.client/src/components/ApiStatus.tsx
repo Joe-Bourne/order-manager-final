@@ -16,30 +16,28 @@ const ApiStatus = () => {
 
   const pingServer = async () => {
     try {
-      const response = await fetch(`${API_URL}/ping`)      
-      if(!appState.isApiOnline)
-      {
-        appState.setApiOnline(response.ok);      
-        setStatusMessage("Server is Online");
-        console.log('API is back online:', response);
-      }      
-      
+      const response = await fetch(`${API_URL}/ping`);
+  
+      const online = response.ok;
+      appState.setApiOnline(online);
+      setStatusMessage(online ? "Server is Online" : "Server is Offline");
+  
+      console.log(`API is ${online ? "ONLINE" : "OFFLINE"}`);
     } catch {
-      appState.setApiOnline(false);      
-      setStatusMessage("Server is offline");
-      console.log('API is OFFLINE')
+      appState.setApiOnline(false);
+      setStatusMessage("Server is Offline");
+      console.log("API is OFFLINE (network error)");
     }
   };
+  
 
   useEffect(() => {
-    pingServer(); // initial check
-
     const interval = setInterval(() => {
       pingServer();
     }, PING_INTERVAL);
 
     return () => clearInterval(interval); // cleanup
-  },[]);
+  },[statusMessage]);
 
   return (      
       <span className="d-inline-block"  data-toggle="tooltip" title={statusMessage} >
