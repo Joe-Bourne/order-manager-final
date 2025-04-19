@@ -1,0 +1,29 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+*.db
+*.db-shm
+*.db-wal
+
+# ASP.NET secrets
+secrets.json
+
+# React / Node
+node_modules/
+dist/
+.vite/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+.vs

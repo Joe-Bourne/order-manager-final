@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@microsoft/signalr": "^8.0.7",
+    "react-signalr": "^0.2.24",
+    "zustand": "^5.0.3"
+  }
+}
