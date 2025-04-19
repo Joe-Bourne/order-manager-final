@@ -63,7 +63,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Docker"))
 
 Console.WriteLine($"Running in {app.Environment.EnvironmentName} environment.");
 
-//Lets avoind certificate errros for this demo 
+//Lets avoid certificate errros for this demo 
 //app.UseHttpsRedirection();
 
 //Map the various routes
